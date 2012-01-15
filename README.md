@@ -30,15 +30,13 @@ Use the following methods to set options that affect library behavior
     HTMLCache.set_cache_dir( cache_dir )
     HTMLCache.set_slash_character( slash_character )
 
-- *`logger`* is an override of a default Python logger, which prints DEBUG
+- `logger` is an override of a default Python logger, which prints DEBUG
   messages regarding the operation of the HTMLCache.
-- *`cache_dir`* defines the folder into which html files are cached. Its
-  default value is `"~/data/html_cache"`.
-- *`slash_character`* is used to to replace slashes in the output file name. Its
-  default value is `"~"`, so that
-
-    URL: http://github.com/pariser/pwsu 
-    CACHE FILE: cache_dir + "/http:~~github.com~pariser~pwsu"
+- `cache_dir` defines the folder into which html files are cached. Its default
+  value is `"~/data/html_cache"`.
+- `slash_character` is used to to replace slashes in the output file name. Its
+  default value is `"~"`, so that the url http://github.com/pariser/pwsu gets
+  put to disk at `cache_dir + "/http:~~github.com~pariser~pwsu"`.
 
 A convenience method allows setting all options at once:
 
